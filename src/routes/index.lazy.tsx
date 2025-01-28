@@ -250,10 +250,12 @@ function RouteComponent() {
               <div className=" gap-4 flex flex-col mt-10 ">
                 <div className="flex gap-4  min-h-32">
                   <div className="flex flex-col justify-start items-center gap-4">
-                    <div className="bg-[#069AEE] p-4  justify-center items-center flex rounded-full w-10 h-10 text-white font-bold">
-                      01
+                    <div className="bg-[#069AEE]/20 p-2 rounded-full  text-white font-bold">
+                      <div className="bg-[#069AEE]  justify-center items-center flex  rounded-full w-10 h-10 ">
+                        01
+                      </div>
                     </div>
-                    <div className="w-0.5 flex-1 bg-[#C5DEEC]"></div>
+                    <div className="w-1 flex-1 bg-[#C5DEEC]"></div>
                   </div>
                   <div>
                     <h4 className="font-bold text-xl mb-2">
@@ -269,10 +271,12 @@ function RouteComponent() {
 
                 <div className="flex gap-4  min-h-32">
                   <div className="flex flex-col justify-start items-center gap-4">
-                    <div className="bg-[#069AEE] p-4  justify-center items-center flex rounded-full w-10 h-10 text-white font-bold">
-                      02
+                    <div className="bg-[#069AEE]/20 p-2 rounded-full  text-white font-bold">
+                      <div className="bg-[#069AEE]  justify-center items-center flex  rounded-full w-10 h-10 ">
+                        02
+                      </div>
                     </div>
-                    <div className="w-0.5 flex-1 bg-[#C5DEEC]"></div>
+                    <div className="w-1 flex-1 bg-[#C5DEEC]"></div>
                   </div>
                   <div>
                     <h4 className="font-bold text-xl mb-2">Total Score</h4>
@@ -286,8 +290,10 @@ function RouteComponent() {
 
                 <div className="flex gap-4">
                   <div className="flex flex-col justify-start items-center gap-4">
-                    <div className="bg-[#069AEE] p-4  justify-center items-center flex rounded-full w-10 h-10 text-white font-bold">
-                      03
+                    <div className="bg-[#069AEE]/20 p-2 rounded-full  text-white font-bold">
+                      <div className="bg-[#069AEE]  justify-center items-center flex  rounded-full w-10 h-10 ">
+                        03
+                      </div>
                     </div>
                   </div>
                   <div>
@@ -314,10 +320,13 @@ function RouteComponent() {
               <div className=" gap-4 flex flex-col mt-10 ">
                 <div className="flex gap-4  min-h-32">
                   <div className="flex flex-col justify-start items-center gap-4">
-                    <div className="bg-[#069AEE]   justify-center items-center flex rounded-full w-10 h-10 text-white font-bold">
-                      <IconWhiteCheck />
+                    <div className="bg-[#069AEE]/20 p-2 rounded-full  text-white font-bold">
+                      <div className="bg-[#069AEE]  justify-center items-center flex  rounded-full w-10 h-10 ">
+                        <IconWhiteCheck />
+                      </div>
                     </div>
-                    <div className="w-0.5 flex-1 bg-[#C5DEEC]"></div>
+
+                    <div className="w-1 flex-1 bg-[#C5DEEC]"></div>
                   </div>
                   <div>
                     <h4 className="font-bold text-xl mb-2">
@@ -333,10 +342,13 @@ function RouteComponent() {
 
                 <div className="flex gap-4  min-h-32">
                   <div className="flex flex-col justify-start items-center gap-4">
-                    <div className="bg-[#069AEE]   justify-center items-center flex rounded-full w-10 h-10 text-white font-bold">
-                      <IconWhiteCheck />
+                    <div className="bg-[#069AEE]/20 p-2 rounded-full  text-white font-bold">
+                      <div className="bg-[#069AEE]  justify-center items-center flex  rounded-full w-10 h-10 ">
+                        <IconWhiteCheck />
+                      </div>
                     </div>
-                    <div className="w-0.5 flex-1 bg-[#C5DEEC]"></div>
+
+                    <div className="w-1 flex-1 bg-[#C5DEEC]"></div>
                   </div>
                   <div>
                     <h4 className="font-bold text-xl mb-2">
@@ -352,8 +364,10 @@ function RouteComponent() {
 
                 <div className="flex gap-4">
                   <div className="flex flex-col justify-start items-center gap-4">
-                    <div className="bg-[#069AEE]   justify-center items-center flex rounded-full w-10 h-10 text-white font-bold">
-                      <IconWhiteCheck />
+                    <div className="bg-[#069AEE]/20 p-2 rounded-full  text-white font-bold">
+                      <div className="bg-[#069AEE]  justify-center items-center flex  rounded-full w-10 h-10 ">
+                        <IconWhiteCheck />
+                      </div>
                     </div>
                   </div>
                   <div>
