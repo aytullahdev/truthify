@@ -71,7 +71,7 @@ function RouteComponent() {
         {/* Hero Section */}
         <div className="relative  py-12 z-50 ">
           <div className="container mx-auto grid md:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6 px-2 lg:px-5">
+            <div className="space-y-6 px-5">
               <div className="text-blue-500 font-medium bg-gradient-to-r  from-[#069AEE] to-[#0655EE] text-transparent bg-clip-text text-base ">
                 WELCOME TO TRUTHIFY
               </div>
