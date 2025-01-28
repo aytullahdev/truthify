@@ -17,7 +17,7 @@ function RouteComponent() {
     <div className="bg-white h-full w-full z-50">
       <img
         src="hero_top_right.svg"
-        className="absolute top-0 right-0 z-10 hidden lg:block"
+        className="absolute top-0 right-0 z-10 hidden lg:block max-w-lg"
       />
       <div className="min-h-screen bg-white z-50">
         {/* Navbar */}
@@ -183,11 +183,11 @@ function RouteComponent() {
               <img
                 src="/quest_person.png"
                 alt="Person working with analytics"
-                className="max-w-sm object-contain absolute -left-40 -bottom-1 z-50"
+                className="max-w-sm object-contain hidden lg:block lg:absolute -left-40  lg:-bottom-1 z-[999]"
               />
               <img
                 src="/quest_frame.png"
-                className="max-w-lg object-contain absolute left-0 bottom-0"
+                className="max-w-lg object-contain hidden lg:block lg:absolute left-0 bottom-0"
               />
             </div>
           </div>
@@ -195,7 +195,7 @@ function RouteComponent() {
 
         {/* About Us Section */}
         <section className="px-6 py-24 bg-white">
-          <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+          <div className="container mx-auto grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <h2 className="text-4xl font-extrabold text-[#272727]">
                 About Us
@@ -232,15 +232,15 @@ function RouteComponent() {
         </section>
 
         {/* <!-- How It Works Section --> */}
-        <section className="py-16 px-4 container   mx-auto">
-          <div className="text-center mb-16">
+        <section className="py-16 container   mx-auto">
+          <div className="text-center mb-8">
             <h2 className="text-4xl font-extrabold mb-3">How It Works</h2>
             <p className="text-[#272727] text-lg">
               Praesent condimentum ligula vel malesuada fringilla.
             </p>
           </div>
 
-          <div className=" bg-[#E8F7FF] grid md:grid-cols-2 gap-8 relative rounded-xl">
+          <div className=" bg-[#E8F7FF] w-full grid md:grid-cols-2 gap-8 relative rounded-xl">
             {/* <!-- Left Column --> */}
             <div className="p-8 rounded-xl">
               <h3 className="font-bold text-2xl mb-2">Calculation</h3>
@@ -376,7 +376,7 @@ function RouteComponent() {
         <section className="pt-16 px-4  bg-gradient-to-r from-[#069AEE] to-[#52B9F3]">
           <div className="container mx-auto">
             <div className="grid md:grid-cols-2 gap-8  items-center  relative  ">
-              <div className="text-white pb-20 relative">
+              <div className="text-white pb-40 relative">
                 <h2 className="text-4xl font-extralight mb-4">
                   Limitless possibilities with
                 </h2>
@@ -397,134 +397,149 @@ function RouteComponent() {
 
                 <img
                   src="/l_arrow_right.svg"
-                  className="absolute left-0 bottom-0"
+                  className="absolute left-0 bottom-5"
                 />
                 <img
                   src="/rect_dots.svg"
                   className="absolute bottom-5 right-5"
                 />
               </div>
-              <div className="space-y-4 h-full w-full ">
-                <img src="/founders.png" className="w-full" />
+              <div className="space-y-4 h-full w-full relative  ">
+                <img
+                  src="/founders.png"
+                  className="w-full max-w-lg md:absolute bottom-0 right-0"
+                />
               </div>
             </div>
           </div>
         </section>
         {/* <!-- Sign Up Section --> */}
-        <section className="py-16 px-4 bg-white">
-          <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8">
+        <section className="py-40 px-4 bg-white">
+          <div className="container mx-auto grid md:grid-cols-2 gap-8">
             <div>
-              <p className="text-blue-500 uppercase tracking-wide mb-2">
+              <div className="text-blue-500 font-medium bg-gradient-to-r  from-[#069AEE] to-[#0655EE] text-transparent bg-clip-text text-base pb-2 ">
                 GET STARTED ABSOLUTELY FREE
-              </p>
-              <h2 className="text-3xl font-bold mb-4">
+              </div>
+
+              <h2 className="text-5xl font-extrabold mb-4">
                 Get up and running
-                <br />
+                <span className="block py-2"></span>
                 in 30 minutes
               </h2>
-              <p className="text-gray-600">
+              <p className="text-[#292929] font-light text-lg">
                 Phasellus vitae sapien ligula. Quisque inter elit,
                 <br />
                 ultricies non fermentum ex, sodales vel lacus.
               </p>
             </div>
-            <div className="bg-white p-6 rounded-lg">
-              <form className="space-y-4">
-                <div>
-                  <label className="block text-sm font-medium text-gray-700">
-                    First Name
-                  </label>
-                  <input
-                    type="text"
-                    placeholder="Enter First Name"
-                    className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700">
-                    Last Name
-                  </label>
-                  <input
-                    type="text"
-                    placeholder="Enter Last Name"
-                    className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md"
-                  />
-                </div>
-                <button className="w-full bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">
-                  Sign Up →
-                </button>
-              </form>
+            <div className="relative w-full h-full">
+              <img
+                src="/sign_back.svg"
+                className="absolute -top-10 -left-10 "
+              />
+              <div className="bg-white border-[#F5EBE3] border max-w-lg  z-50 p-10 drop-shadow-lg rounded-xl relative   ">
+                <form className="space-y-5 ">
+                  <div>
+                    <label className="block text-base font-semibold text-[#1D222D]">
+                      First Name
+                    </label>
+                    <input
+                      type="text"
+                      placeholder="Enter First Name"
+                      className="mt-1 block w-full outline-none px-4 py-2 border text-base border-[#E5E5E7] bg-[#F8F9FB]  font-light  rounded-lg"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-base font-semibold text-[#1D222D]">
+                      Last Name
+                    </label>
+                    <input
+                      type="text"
+                      placeholder="Enter Last Name"
+                      className="mt-1 block w-full outline-none px-4 py-2 border text-base border-[#E5E5E7] bg-[#F8F9FB]  font-light  rounded-lg"
+                    />
+                  </div>
+                  <div className="flex justify-start items-center gap-2 py-2">
+                    <input
+                      type="checkbox"
+                      id="terms"
+                      className="   accent-[#F8F9FB]  rounded bg-[#F8F9FB] text-[#F8F9FB] size-6   "
+                    />
+                    <p className="text-xs text-[#1D222D] font-thin leading-5">
+                      Creating an account means you’re okay with our Terms of
+                      Service, Privacy Policy, and default Notification Settings
+                    </p>
+                  </div>
+                  <Button size="lg" className="bg-[#069AEE] hover:bg-sky-600">
+                    Sign Up <MoveUpRight className="stroke-white" />
+                  </Button>
+                </form>
+              </div>
             </div>
           </div>
         </section>
 
         {/* footer */}
-        <footer className="bg-[#0a1628] text-white py-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        <footer className="bg-[#0a1628] text-white pt-16">
+          <div className="container mx-auto px-4 sm:px-6">
             {/* <!-- Main Footer Content --> */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
+            <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
               {/* <!-- Logo and Contact Section --> */}
               <div className="lg:col-span-2">
                 <div className="mb-6">
                   <img
-                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-01-28%20at%2012.41.55%E2%80%AFPM-52UY6TcJhbnXSVcVfymrhExyGsJpQv.png"
+                    src="/truthify_logo.png"
                     alt="Truthify"
                     className="h-8"
                   />
                 </div>
-                <address className="not-italic mb-6 text-gray-400">
+                <address className="not-italic mb-6 text-white/60 text-sm font-thin">
                   123 Market St, #22B Charlottesville,
                   <br />
                   California 44635
                 </address>
-                <div className="space-y-3">
-                  <div className="flex items-center gap-2">
-                    <div className="flex items-center gap-2 text-gray-400">
-                      <svg
-                        className="w-5 h-5"
-                        fill="currentColor"
-                        viewBox="0 0 24 24"
+                <div className="space-y-3 grid justify-center lg:grid-cols-2">
+                  <div className="flex flex-row gap-5 items-center  ">
+                    <img src="/phone.svg" alt="phone" className="size-6" />
+
+                    <div className="flex flex-col">
+                      <span className="text-white/60 font-thin text-xs">
+                        Call Us Now
+                      </span>
+                      <a
+                        href="tel:(123) 456-7891"
+                        className="text-white text-base font-normal pt-1"
                       >
-                        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
-                      </svg>
-                      <span>Email Us</span>
+                        (123) 456-7891
+                      </a>
                     </div>
-                    <a
-                      href="mailto:email@gmail.com"
-                      className="text-white hover:text-blue-400 transition-colors"
-                    >
-                      email@gmail.com
-                    </a>
                   </div>
-                  <div className="flex items-center gap-2">
-                    <div className="flex items-center gap-2 text-gray-400">
-                      <svg
-                        className="w-5 h-5"
-                        fill="currentColor"
-                        viewBox="0 0 24 24"
+                  <div className="flex flex-row gap-6 items-center  ">
+                    <img src="/email.svg" alt="phone" className="size-6" />
+
+                    <div className="flex flex-col">
+                      <span className="text-white/60 font-thin text-xs">
+                        Email Us
+                      </span>
+                      <a
+                        href="mailto:email@gmail.com"
+                        className="text-white text-base font-normal pt-1"
                       >
-                        <path d="M6.62 10.79c1.44 2.83 3.76 5.15 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
-                      </svg>
-                      <span>Call Us Now</span>
+                        email@gmail.com
+                      </a>
                     </div>
-                    <a
-                      href="tel:(123) 456-7891"
-                      className="text-white hover:text-blue-400 transition-colors"
-                    >
-                      (123) 456-7891
-                    </a>
                   </div>
                 </div>
               </div>
 
               {/* <!-- Who we are --> */}
               <div>
-                <h3 className="text-lg font-semibold mb-4">Who we are</h3>
+                <h3 className="text-base  font-thin  mb-4">Who we are</h3>
                 <ul className="space-y-3">
                   <li>
                     <a
                       href="#"
-                      className="text-gray-400 hover:text-white transition-colors"
+                      className="text-white/60 font-thin hover:text-white transition-colors"
                     >
                       About
                     </a>
@@ -532,7 +547,7 @@ function RouteComponent() {
                   <li>
                     <a
                       href="#"
-                      className="text-gray-400 hover:text-white transition-colors"
+                      className="text-white/60 font-thin hover:text-white transition-colors"
                     >
                       How It Works
                     </a>
@@ -540,7 +555,7 @@ function RouteComponent() {
                   <li>
                     <a
                       href="#"
-                      className="text-gray-400 hover:text-white transition-colors"
+                      className="text-white/60 font-thin hover:text-white transition-colors"
                     >
                       Sign Up
                     </a>
@@ -550,12 +565,12 @@ function RouteComponent() {
 
               {/* <!-- Services --> */}
               <div>
-                <h3 className="text-lg font-semibold mb-4">Services</h3>
+                <h3 className="text-base  font-thin mb-4">Services</h3>
                 <ul className="space-y-3">
                   <li>
                     <a
                       href="#"
-                      className="text-gray-400 hover:text-white transition-colors"
+                      className="text-white/60 font-thin hover:text-white transition-colors"
                     >
                       Government Officials Scores
                     </a>
@@ -563,7 +578,7 @@ function RouteComponent() {
                   <li>
                     <a
                       href="#"
-                      className="text-gray-400 hover:text-white transition-colors"
+                      className="text-white/60 font-thin hover:text-white transition-colors"
                     >
                       Business Executives Scores
                     </a>
@@ -573,12 +588,12 @@ function RouteComponent() {
 
               {/* <!-- Resources --> */}
               <div>
-                <h3 className="text-lg font-semibold mb-4">Resources</h3>
+                <h3 className="text-base  font-thin mb-4">Resources</h3>
                 <ul className="space-y-3">
                   <li>
                     <a
                       href="#"
-                      className="text-gray-400 hover:text-white transition-colors"
+                      className="text-white/60 font-thin hover:text-white transition-colors"
                     >
                       Privacy Policy
                     </a>
@@ -586,7 +601,7 @@ function RouteComponent() {
                   <li>
                     <a
                       href="#"
-                      className="text-gray-400 hover:text-white transition-colors"
+                      className="text-white/60 font-thin hover:text-white transition-colors"
                     >
                       Terms of Use
                     </a>
@@ -594,63 +609,26 @@ function RouteComponent() {
                 </ul>
               </div>
             </div>
-
-            {/* <!-- Footer Bottom --> */}
-            <div className="pt-8 border-t border-gray-800 flex flex-col sm:flex-row justify-between items-center gap-4">
-              <p className="text-gray-400 text-sm">
-                © 2024 Truthify. All rights reserved.
-              </p>
-              {/* <!-- Social Links --> */}
-              <div className="flex items-center gap-6">
-                <a
-                  href="#"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  <svg
-                    className="w-6 h-6"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
-                  </svg>
-                </a>
-                <a
-                  href="#"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  <svg
-                    className="w-6 h-6"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z" />
-                  </svg>
-                </a>
-                <a
-                  href="#"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  <svg
-                    className="w-6 h-6"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 19.66c-3.468 0-6.28-2.813-6.28-6.28s2.813-6.28 6.28-6.28 6.28 2.813 6.28 6.28-2.813 6.28-6.28 6.28zm7.5-11.33a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" />
-                  </svg>
-                </a>
-                <a
-                  href="#"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  <svg
-                    className="w-6 h-6"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M17.525 9H14V7c0-1.032.084-1.682 1.563-1.682h1.868v-3.18C16.522 2.044 15.608 1.998 14.693 2 11.98 2 10 3.657 10 6.699V9H7v4l3-.001V22h4v-9.003l3.066-.001L17.525 9z" />
-                  </svg>
-                </a>
-              </div>
+          </div>
+          {/* <!-- Footer Bottom --> */}
+          <div className="container mx-auto bg-[#0a1628] py-4 px-5 border-t border-gray-800 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <p className="text-gray-400 text-sm">
+              © 2024 Truthify. All rights reserved.
+            </p>
+            {/* <!-- Social Links --> */}
+            <div className="flex items-center gap-6">
+              <a href="#">
+                <img src="/facebook.png" alt="facebook" className="size-6" />
+              </a>
+              <a href="#">
+                <img src="/google.png" alt="facebook" className="size-6" />
+              </a>
+              <a href="#">
+                <img src="/apple.png" alt="facebook" className="size-6" />
+              </a>
+              <a href="#">
+                <img src="/instagram.png" alt="facebook" className="size-6" />
+              </a>
             </div>
           </div>
         </footer>
