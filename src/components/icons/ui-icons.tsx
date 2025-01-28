@@ -46,3 +46,27 @@ export const IconLock: React.FC<IconProps> = ({ className }) => {
     </svg>
   );
 };
+
+export const IconCheck: React.FC<IconProps> = ({ className }) => {
+  return <img src="/white_check.svg" alt="check" className={className} />;
+};
+
+export const IconWhiteCheck: React.FC<IconProps> = ({ className }) => {
+  return (
+    <svg
+      width="14"
+      height="11"
+      viewBox="0 0 14 11"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M12.3334 2L5.00002 9.33333L1.66669 6"
+        stroke="white"
+        stroke-width="3"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+  );
+};

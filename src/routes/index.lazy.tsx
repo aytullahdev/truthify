@@ -1,6 +1,8 @@
 import {
   ChevronDown,
+  IconCheck,
   IconLock,
+  IconWhiteCheck,
   MoveUpRight,
 } from "@/components/icons/ui-icons";
 import { Button } from "@/components/ui/button";
@@ -151,51 +153,41 @@ function RouteComponent() {
         </div>
 
         {/* Quest for Truth Section */}
-        <section className="bg-gradient-to-r from-blue-500 to-blue-400/80 px-6 py-16">
-          <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8">
-              <h2 className="text-4xl md:text-5xl font-bold text-white">
+        <section className="bg-gradient-to-r from-[#0089D7] to-[#DBFAD8] px-6 pt-16">
+          <div className="mx-auto container grid md:grid-cols-2 gap-12 items-center">
+            <div className="space-y-8 pb-10">
+              <h2 className="text-4xl md:text-5xl font-extrabold text-white">
                 Join our Quest for Truth
               </h2>
-              <p className="text-xl text-white/90">
+              <p className="text-lg text-white/90">
                 Subscribe and be ready for never before seen analysis
               </p>
-              <ul className="space-y-4">
+              <ul className="space-y-4 text-sm">
                 {[
                   "Know more about the people you are voting for.",
                   "Be in the Know about new features and new analysis tools",
                   "Learn about analysis applications in other areas",
                 ].map((text, i) => (
                   <li key={i} className="flex items-center gap-2 text-white">
-                    <svg
-                      className="w-5 h-5"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <circle cx="10" cy="10" r="8" fill="white" />
-                    </svg>
+                    <IconCheck className="stroke-white" />
                     {text}
                   </li>
                 ))}
               </ul>
-              <button className="bg-white text-blue-600 px-6 py-3 rounded-lg font-medium hover:bg-blue-50 transition-colors inline-flex items-center gap-2">
+              <button className="bg-white text-[#272727] px-6 py-3 rounded-lg font-semibold transition-colors inline-flex items-center gap-2">
                 Subscribe Now
-                <svg
-                  className="w-4 h-4"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                >
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
+                <MoveUpRight className="stroke-[#272727]" />
               </button>
             </div>
-            <div className="relative">
+            <div className="relative w-full h-full">
               <img
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-01-28%20at%2011.03.46%E2%80%AFAM-ZwrcpKKoZmiTEA3s4542Nc4JIPXtkk.png"
+                src="/quest_person.png"
                 alt="Person working with analytics"
-                className="w-full object-contain"
+                className="max-w-sm object-contain absolute -left-40 -bottom-1 z-50"
+              />
+              <img
+                src="/quest_frame.png"
+                className="max-w-lg object-contain absolute left-0 bottom-0"
               />
             </div>
           </div>
@@ -205,118 +197,86 @@ function RouteComponent() {
         <section className="px-6 py-24 bg-white">
           <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
-              <h2 className="text-4xl font-bold text-gray-900">About Us</h2>
-              <p className="text-gray-600 leading-relaxed">
+              <h2 className="text-4xl font-extrabold text-[#272727]">
+                About Us
+              </h2>
+              <p className="text-[#292929] text-lg text-start leading-relaxed">
                 At Truthify, our foundation is built upon an unwavering
                 commitment to honesty that some might call stubborn. In every
                 facet of our operations, from the drawing board to the final
                 product, honesty isn't just a policy—it's our core principle. We
                 believe that transparency and integrity are not merely virtues
                 but essential pillars that support the{" "}
-                <span className="font-medium">
+                <span className="font-semibold">
                   trust our customers, partners, and employees place in us.
                 </span>
               </p>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-gray-600 text-lg leading-relaxed">
                 Our dedication to truthfulness guides our decisions, shapes our
                 culture, and drives our innovations. For us, honesty isn't just
                 the best policy—it's the only way to do business.
               </p>
-              <button className="bg-blue-500 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-600 transition-colors inline-flex items-center gap-2">
+              <button className="bg-[#069AEE] text-white px-6 py-3 rounded-lg font-medium  transition-colors inline-flex items-center gap-2">
                 Join Now
-                <svg
-                  className="w-4 h-4"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                >
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
+                <MoveUpRight className="stroke-white" />
               </button>
             </div>
             <div className="relative">
-              <div className="absolute -top-10 left-10 bg-white rounded-lg shadow-lg p-3 flex items-center gap-3">
-                <div className="w-8 h-8 rounded-full bg-gray-200"></div>
-                <div className="space-y-1">
-                  <p className="text-sm font-medium">Robert R.</p>
-                  <div className="w-20 h-2 bg-gray-200 rounded"></div>
-                </div>
-              </div>
-              <div className="absolute -top-2 left-32 bg-white rounded-lg shadow-lg p-3 flex items-center gap-3">
-                <div className="w-8 h-8 rounded-full bg-gray-200"></div>
-                <div className="space-y-1">
-                  <p className="text-sm font-medium">Charlotte</p>
-                  <div className="w-20 h-2 bg-gray-200 rounded"></div>
-                </div>
-              </div>
               <img
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-01-28%20at%2011.03.46%E2%80%AFAM-ZwrcpKKoZmiTEA3s4542Nc4JIPXtkk.png"
+                src="/about_right.png"
                 alt="Business professional with analytics"
-                className="w-full rounded-lg"
+                className="w-full rounded-lg max-w-2xl"
               />
             </div>
           </div>
         </section>
 
         {/* <!-- How It Works Section --> */}
-        <section className="py-16 px-4 max-w-7xl mx-auto">
+        <section className="py-16 px-4 container  mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold mb-2">How It Works</h2>
-            <p className="text-gray-600">
-              Phasellus condimentum ligula vel malesuada fringilla.
+            <h2 className="text-4xl font-extrabold mb-3">How It Works</h2>
+            <p className="text-[#272727] text-lg">
+              Praesent condimentum ligula vel malesuada fringilla.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className=" bg-[#E8F7FF] grid md:grid-cols-2 gap-8 relative">
             {/* <!-- Left Column --> */}
-            <div className="bg-gray-50 p-8 rounded-xl">
-              <h3 className="font-semibold mb-6">Calculation</h3>
-              <div className="space-y-8">
-                <div className="flex gap-4">
-                  <div className="bg-blue-500 p-2 rounded-lg h-min">
-                    <svg
-                      className="w-6 h-6 text-white"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M5 13l4 4L19 7"
-                      ></path>
-                    </svg>
+            <div className="p-8 rounded-xl">
+              <h3 className="font-bold text-2xl mb-2">Calculation</h3>
+              <p className="text-[#272727] text-base">
+                Praesent condimentum ligula vel malesuada fringilla.
+              </p>
+              <div className=" gap-4 flex flex-col mt-10 ">
+                <div className="flex gap-4  min-h-32">
+                  <div className="flex flex-col justify-start items-center gap-4">
+                    <div className="bg-[#069AEE] p-4  justify-center items-center flex rounded-full w-10 h-10 text-white font-bold">
+                      01
+                    </div>
+                    <div className="w-0.5 flex-1 bg-[#C5DEEC]"></div>
                   </div>
                   <div>
-                    <h4 className="font-medium mb-2">Sentiment and Points</h4>
-                    <p className="text-gray-600 text-sm">
+                    <h4 className="font-bold text-xl mb-2">
+                      Sentiment and Points
+                    </h4>
+                    <p className="text-[#272727]  text-base">
                       Each point you receive on content is assigned a numerical
-                      score, or "Integrity Score." Comments, posts, etc.
+                      value, or "Integrity Score." Commonly, scores are
+                      currently 1 through 10.
                     </p>
                   </div>
                 </div>
 
-                <div className="flex gap-4">
-                  <div className="bg-blue-500 p-2 rounded-lg h-min">
-                    <svg
-                      className="w-6 h-6 text-white"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
-                      ></path>
-                    </svg>
+                <div className="flex gap-4  min-h-32">
+                  <div className="flex flex-col justify-start items-center gap-4">
+                    <div className="bg-[#069AEE] p-4  justify-center items-center flex rounded-full w-10 h-10 text-white font-bold">
+                      02
+                    </div>
+                    <div className="w-0.5 flex-1 bg-[#C5DEEC]"></div>
                   </div>
                   <div>
-                    <h4 className="font-medium mb-2">Total Score</h4>
-                    <p className="text-gray-600 text-sm">
+                    <h4 className="font-bold text-xl mb-2">Total Score</h4>
+                    <p className="text-[#272727] text-base">
                       Multiple angles of sentiment analysis will be applied to a
                       source of content and weighted together equally to create
                       a total score.
@@ -325,24 +285,14 @@ function RouteComponent() {
                 </div>
 
                 <div className="flex gap-4">
-                  <div className="bg-blue-500 p-2 rounded-lg h-min">
-                    <svg
-                      className="w-6 h-6 text-white"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M13 10V3L4 14h7v7l9-11h-7z"
-                      ></path>
-                    </svg>
+                  <div className="flex flex-col justify-start items-center gap-4">
+                    <div className="bg-[#069AEE] p-4  justify-center items-center flex rounded-full w-10 h-10 text-white font-bold">
+                      03
+                    </div>
                   </div>
                   <div>
-                    <h4 className="font-medium mb-2">Honesty score</h4>
-                    <p className="text-gray-600 text-sm">
+                    <h4 className="font-bold text-xl mb-2">Honesty score</h4>
+                    <p className="text-[#272727] text-base">
                       Average of content related to an individual from multiple
                       sources to create a bias towards an individual general
                       honesty over time.
@@ -351,34 +301,69 @@ function RouteComponent() {
                 </div>
               </div>
             </div>
+            <div className="absolute -left-1/2 flex justify-end border-0 drop-shadow-xl  items-center rounded-full w-full -translate-x-5 h-full ">
+              <img src="/sign_right.svg" className="absolute -right-6" />
+            </div>
 
             {/* <!-- Right Column --> */}
-            <div className="bg-gray-50 p-8 rounded-xl">
-              <h3 className="font-semibold mb-6">Sentiment</h3>
-              <div className="space-y-8">
-                <div className="flex gap-4">
-                  <div className="bg-blue-500 p-2 rounded-lg h-min">
-                    <svg
-                      className="w-6 h-6 text-white"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"
-                      ></path>
-                    </svg>
+            <div className="p-8 rounded-xl">
+              <h3 className="font-bold text-2xl mb-2">Sentiment</h3>
+              <p className="text-[#272727] text-base">
+                Sentiment analysis will be scored to include:
+              </p>
+              <div className=" gap-4 flex flex-col mt-10 ">
+                <div className="flex gap-4  min-h-32">
+                  <div className="flex flex-col justify-start items-center gap-4">
+                    <div className="bg-[#069AEE]   justify-center items-center flex rounded-full w-10 h-10 text-white font-bold">
+                      <IconWhiteCheck />
+                    </div>
+                    <div className="w-0.5 flex-1 bg-[#C5DEEC]"></div>
                   </div>
                   <div>
-                    <h4 className="font-medium mb-2">
+                    <h4 className="font-bold text-xl mb-2">
+                      Sentiment and Points
+                    </h4>
+                    <p className="text-[#272727]  text-base">
+                      Each point you receive on content is assigned a numerical
+                      value, or "Integrity Score." Commonly, scores are
+                      currently 1 through 10.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex gap-4  min-h-32">
+                  <div className="flex flex-col justify-start items-center gap-4">
+                    <div className="bg-[#069AEE]   justify-center items-center flex rounded-full w-10 h-10 text-white font-bold">
+                      <IconWhiteCheck />
+                    </div>
+                    <div className="w-0.5 flex-1 bg-[#C5DEEC]"></div>
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-xl mb-2">
                       Intelligence to relay complex information
                     </h4>
-                    <p className="text-gray-600 text-sm">
-                      Phasellus vitae sapien ligula. Quisque inter elit,
-                      ultricies non fermentum ex, sodales vel lacus.
+                    <p className="text-[#272727] text-base">
+                      Phasellus vitae sapien ligula. Quisque dolor elit,
+                      ultrices non fermentum eu, sodales vel lacus. Vestibulum
+                      at nibh laoreet, luctus nisi non, molestie arcu.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex gap-4">
+                  <div className="flex flex-col justify-start items-center gap-4">
+                    <div className="bg-[#069AEE]   justify-center items-center flex rounded-full w-10 h-10 text-white font-bold">
+                      <IconWhiteCheck />
+                    </div>
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-xl mb-2">
+                      Harmonious argumentation over time
+                    </h4>
+                    <p className="text-[#272727] text-base">
+                      Phasellus vitae sapien ligula. Quisque dolor elit,
+                      ultrices non fermentum eu, sodales vel lacus. Vestibulum
+                      at nibh laoreet, luctus nisi non, molestie arcu.
                     </p>
                   </div>
                 </div>
@@ -388,54 +373,6 @@ function RouteComponent() {
         </section>
 
         {/* <!-- Limitless Possibilities Section --> */}
-        <section className="bg-blue-500 py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-8 items-center">
-              <div className="text-white">
-                <h2 className="text-3xl font-bold mb-4">
-                  Limitless possibilities with
-                </h2>
-                <p className="text-4xl font-bold mb-4">1000+ Integrity Score</p>
-                <p className="mb-8">
-                  Phasellus vitae sapien ligula. Quisque inter elit, ultricies
-                  non fermentum ex.
-                </p>
-                <button className="bg-white text-blue-500 px-6 py-2 rounded-lg font-medium hover:bg-blue-50">
-                  Sign Up Now
-                </button>
-              </div>
-              <div className="space-y-4">
-                {/* <!-- Score Cards --> */}
-                <div className="bg-white p-4 rounded-lg flex items-center justify-between">
-                  <div className="flex items-center gap-4">
-                    <img
-                      src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-01-28%20at%2012.25.29%E2%80%AFPM-SVh2Usu2PAo9Jj2euMa9ktvywRfhRj.png"
-                      alt="Profile"
-                      className="w-12 h-12 rounded-full"
-                    />
-                    <div>
-                      <p className="font-medium">Satya Nadella</p>
-                      <p className="text-sm text-gray-600">CEO of Microsoft</p>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-4">
-                    <img
-                      src="/microsoft-logo.png"
-                      alt="Company"
-                      className="w-8 h-8"
-                    />
-                    <div className="w-16 h-16 relative">
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <span className="text-blue-500 font-bold">78%</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                {/* <!-- Repeat similar cards for other executives --> */}
-              </div>
-            </div>
-          </div>
-        </section>
 
         {/* <!-- Sign Up Section --> */}
         <section className="py-16 px-4 bg-white">
