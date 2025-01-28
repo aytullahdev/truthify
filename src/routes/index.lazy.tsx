@@ -17,7 +17,7 @@ function RouteComponent() {
     <div className="bg-white h-full w-full z-50">
       <img
         src="hero_top_right.svg"
-        className="absolute top-0 right-0 z-10 hidden lg:block max-w-lg"
+        className="absolute top-0 right-0 z-10 hidden md:block lg:block max-w-lg"
       />
       <div className="min-h-screen bg-white z-50">
         {/* Navbar */}
@@ -32,11 +32,11 @@ function RouteComponent() {
             </Link>
             <div className="hidden md:flex items-center gap-6 z-50">
               <button className="flex items-center text-[#272727] text-base hover:text-gray-900">
-                Government Officials Scores{" "}
+                Government Officials Scores
                 <ChevronDown className="ml-1 h-4 w-4" />
               </button>
               <button className="flex items-center text-[#272727] text-base hover:text-gray-900">
-                Business Executives Scores{" "}
+                Business Executives Scores
                 <ChevronDown className="ml-1 h-4 w-4" />
               </button>
               <Link
@@ -183,7 +183,7 @@ function RouteComponent() {
               <img
                 src="/quest_person.png"
                 alt="Person working with analytics"
-                className="max-w-sm object-contain hidden lg:block lg:absolute -left-40  lg:-bottom-1 z-[999]"
+                className="max-w-sm object-contain hidden md:block md:absolute lg:-left-40  md:-bottom-1 z-[999]"
               />
               <img
                 src="/quest_frame.png"
