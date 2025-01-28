@@ -149,6 +149,115 @@ function RouteComponent() {
             </div>
           </div>
         </div>
+
+        {/* Quest for Truth Section */}
+        <section className="bg-gradient-to-r from-blue-500 to-blue-400/80 px-6 py-16">
+          <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div className="space-y-8">
+              <h2 className="text-4xl md:text-5xl font-bold text-white">
+                Join our Quest for Truth
+              </h2>
+              <p className="text-xl text-white/90">
+                Subscribe and be ready for never before seen analysis
+              </p>
+              <ul className="space-y-4">
+                {[
+                  "Know more about the people you are voting for.",
+                  "Be in the Know about new features and new analysis tools",
+                  "Learn about analysis applications in other areas",
+                ].map((text, i) => (
+                  <li key={i} className="flex items-center gap-2 text-white">
+                    <svg
+                      className="w-5 h-5"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <circle cx="10" cy="10" r="8" fill="white" />
+                    </svg>
+                    {text}
+                  </li>
+                ))}
+              </ul>
+              <button className="bg-white text-blue-600 px-6 py-3 rounded-lg font-medium hover:bg-blue-50 transition-colors inline-flex items-center gap-2">
+                Subscribe Now
+                <svg
+                  className="w-4 h-4"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                >
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </button>
+            </div>
+            <div className="relative">
+              <img
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-01-28%20at%2011.03.46%E2%80%AFAM-ZwrcpKKoZmiTEA3s4542Nc4JIPXtkk.png"
+                alt="Person working with analytics"
+                className="w-full object-contain"
+              />
+            </div>
+          </div>
+        </section>
+
+        {/* About Us Section */}
+        <section className="px-6 py-24 bg-white">
+          <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div className="space-y-6">
+              <h2 className="text-4xl font-bold text-gray-900">About Us</h2>
+              <p className="text-gray-600 leading-relaxed">
+                At Truthify, our foundation is built upon an unwavering
+                commitment to honesty that some might call stubborn. In every
+                facet of our operations, from the drawing board to the final
+                product, honesty isn't just a policy—it's our core principle. We
+                believe that transparency and integrity are not merely virtues
+                but essential pillars that support the{" "}
+                <span className="font-medium">
+                  trust our customers, partners, and employees place in us.
+                </span>
+              </p>
+              <p className="text-gray-600 leading-relaxed">
+                Our dedication to truthfulness guides our decisions, shapes our
+                culture, and drives our innovations. For us, honesty isn't just
+                the best policy—it's the only way to do business.
+              </p>
+              <button className="bg-blue-500 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-600 transition-colors inline-flex items-center gap-2">
+                Join Now
+                <svg
+                  className="w-4 h-4"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                >
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </button>
+            </div>
+            <div className="relative">
+              <div className="absolute -top-10 left-10 bg-white rounded-lg shadow-lg p-3 flex items-center gap-3">
+                <div className="w-8 h-8 rounded-full bg-gray-200"></div>
+                <div className="space-y-1">
+                  <p className="text-sm font-medium">Robert R.</p>
+                  <div className="w-20 h-2 bg-gray-200 rounded"></div>
+                </div>
+              </div>
+              <div className="absolute -top-2 left-32 bg-white rounded-lg shadow-lg p-3 flex items-center gap-3">
+                <div className="w-8 h-8 rounded-full bg-gray-200"></div>
+                <div className="space-y-1">
+                  <p className="text-sm font-medium">Charlotte</p>
+                  <div className="w-20 h-2 bg-gray-200 rounded"></div>
+                </div>
+              </div>
+              <img
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-01-28%20at%2011.03.46%E2%80%AFAM-ZwrcpKKoZmiTEA3s4542Nc4JIPXtkk.png"
+                alt="Business professional with analytics"
+                className="w-full rounded-lg"
+              />
+            </div>
+          </div>
+        </section>
       </div>
     </div>
   );
