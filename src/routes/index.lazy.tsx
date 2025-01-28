@@ -232,7 +232,7 @@ function RouteComponent() {
         </section>
 
         {/* <!-- How It Works Section --> */}
-        <section className="py-16 px-4 container  mx-auto">
+        <section className="py-16 px-4 container   mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-extrabold mb-3">How It Works</h2>
             <p className="text-[#272727] text-lg">
@@ -240,7 +240,7 @@ function RouteComponent() {
             </p>
           </div>
 
-          <div className=" bg-[#E8F7FF] grid md:grid-cols-2 gap-8 relative">
+          <div className=" bg-[#E8F7FF] grid md:grid-cols-2 gap-8 relative rounded-xl">
             {/* <!-- Left Column --> */}
             <div className="p-8 rounded-xl">
               <h3 className="font-bold text-2xl mb-2">Calculation</h3>
@@ -373,7 +373,43 @@ function RouteComponent() {
         </section>
 
         {/* <!-- Limitless Possibilities Section --> */}
+        <section className="pt-16 px-4  bg-gradient-to-r from-[#069AEE] to-[#52B9F3]">
+          <div className="container mx-auto">
+            <div className="grid md:grid-cols-2 gap-8  items-center  relative  ">
+              <div className="text-white pb-20 relative">
+                <h2 className="text-4xl font-extralight mb-4">
+                  Limitless possibilities with
+                </h2>
+                <p className="text-4xl  mb-4 font-extralight">
+                  <span className="font-bold">1000+</span> Integrity Score
+                </p>
+                <p className="mb-8 text-lg font-extralight">
+                  Phasellus vitae sapien ligula. Quisque dolor elit, ultrices
+                  non fermentum eu, sodales vel lacus. Vestibulum at nibh
+                  laoreet, luctus nisi non, molestie arcu.
+                  <span className="mt-5 block"></span>
+                  To see more detailedassessments, summaries, and scores...
+                </p>
+                <Button className="bg-white text-[#272727] hover:bg-white">
+                  Sign Up Now
+                  <MoveUpRight className="ml-2 h-4 w-4 stroke-black" />
+                </Button>
 
+                <img
+                  src="/l_arrow_right.svg"
+                  className="absolute left-0 bottom-0"
+                />
+                <img
+                  src="/rect_dots.svg"
+                  className="absolute bottom-5 right-5"
+                />
+              </div>
+              <div className="space-y-4 h-full w-full ">
+                <img src="/founders.png" className="w-full" />
+              </div>
+            </div>
+          </div>
+        </section>
         {/* <!-- Sign Up Section --> */}
         <section className="py-16 px-4 bg-white">
           <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8">
