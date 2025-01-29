@@ -427,6 +427,7 @@ function RouteComponent() {
             </div>
           </div>
         </section>
+
         {/* <!-- Sign Up Section --> */}
         <section className="py-40 px-4 bg-white">
           <div className="container mx-auto grid md:grid-cols-2 gap-8">
