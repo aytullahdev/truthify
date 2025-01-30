@@ -19,15 +19,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <AppSidebar />
 
       <SidebarInset>
-        <header className="flex h-5 shrink-0 items-center gap-2 transition-[width,height] ease-linear group-has-[[data-collapsible=icon]]/sidebar-wrapper:h-12"></header>
-        <div className="flex flex-1 flex-col gap-4 p-4 pt-0">
+        <header className="flex  shrink-0 items-center gap-2 transition-[width,height] ease-linear group-has-[[data-collapsible=icon]]/sidebar-wrapper:h-12 border h-14">
+          <p className="px-5 text-[#292929] font-semibold">Dashboard</p>
+        </header>
+        <div className="flex flex-1 flex-col min-h-full min-w-full">
           {children}
-          <div className="grid auto-rows-min gap-4 md:grid-cols-3">
-            <div className="aspect-video rounded-xl bg-muted/50" />
-            <div className="aspect-video rounded-xl bg-muted/50" />
-            <div className="aspect-video rounded-xl bg-muted/50" />
-          </div>
-          <div className="min-h-[100vh] flex-1 rounded-xl bg-muted/50 md:min-h-min" />
         </div>
       </SidebarInset>
     </SidebarProvider>
