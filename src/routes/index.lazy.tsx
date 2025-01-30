@@ -30,7 +30,7 @@ function RouteComponent() {
                 className="w-[150px]"
               />
             </Link>
-            <div className="hidden md:flex items-center gap-6 z-50">
+            <div className="hidden  items-center gap-6 z-50 ">
               <button className="flex items-center text-[#272727] text-base hover:text-gray-900">
                 Government Officials Scores
                 <ChevronDown className="ml-1 h-4 w-4" />
