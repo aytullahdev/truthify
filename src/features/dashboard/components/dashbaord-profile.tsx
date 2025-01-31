@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { useDashboardContext } from "../hooks/use-dashbaord-context";
+import DynamicLineGauge from "./profil-gauge-chart";
 const CARD_DATA = [
   {
     title: "Positive Attributes",
@@ -100,7 +101,7 @@ export const ScoreCard = ({
 // DashboardProfile.tsx
 export const DashboardProfile = () => {
   return (
-    <div className="w-full h-full flex flex-col">
+    <div className="w-full  flex flex-col">
       {/* Analytic Buttons */}
       <AnalyticButtons />
 
@@ -110,6 +111,14 @@ export const DashboardProfile = () => {
         role="CEO, Microsoft"
         companyLogo="microsoft.png"
         profileImage="satynadella.png"
+      />
+
+      {/* Gauge char */}
+      <DynamicLineGauge
+        value={7.8}
+        maxValue={10}
+        title="Total Integrity Score"
+        caption="Aliquam porta orci sodales nunc pellentesque, sed aliquam justo tincidunt. Ut sit amet congue lorem raesent imperdiet tortor ac dolor."
       />
     </div>
   );
@@ -155,7 +164,7 @@ export const ExecutiveProfile = ({
   profileImage: string;
 }) => {
   return (
-    <div className="flex flex-row justify-between items-center py-10">
+    <div className="flex flex-row justify-between items-center pt-10">
       <div className="flex flex-row  space-x-5 items-center">
         <img
           src={profileImage}
