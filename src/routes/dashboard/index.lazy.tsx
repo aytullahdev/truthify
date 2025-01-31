@@ -1,14 +1,14 @@
 import { createLazyFileRoute } from "@tanstack/react-router";
 import Layout from "../../components/layout";
-import { useState } from "react";
 import AnalyticsDashboard from "@/features/dashboard/components/dashbaord-profile";
+import { useDashboardContext } from "@/features/dashboard/hooks/use-dashbaord-context";
 
 export const Route = createLazyFileRoute("/dashboard/")({
   component: RouteComponent,
 });
 
 function RouteComponent() {
-  const [showDeepAnalytics, setShowDeepAnalytics] = useState<boolean>(false);
+  const { showDeepAnalytics } = useDashboardContext();
   return (
     <Layout>
       <div className="flex flex-col lg:flex-row gap-2 w-full h-full  max-h-full max-w-full  overflow-y-auto bg-white">
