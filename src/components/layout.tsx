@@ -1,19 +1,7 @@
 import { SidebarInset, SidebarProvider } from "./ui/sidebar";
 import { AppSidebar } from "./app-sidebar";
-import { useSession } from "@/features/auth/hooks/useSession";
-import { useNavigate } from "@tanstack/react-router";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
-  const { session } = useSession();
-  const navigate = useNavigate({
-    from: "/dashboard",
-  });
-
-  if (!session?.access_token) {
-    navigate({
-      to: "/sign-in",
-    });
-  }
   return (
     <SidebarProvider>
       <AppSidebar />
