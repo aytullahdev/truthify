@@ -2,6 +2,7 @@ import { createLazyFileRoute } from "@tanstack/react-router";
 import Layout from "../../components/layout";
 import AnalyticsDashboard from "@/features/dashboard/components/dashbaord-profile";
 import { useDashboardContext } from "@/features/dashboard/hooks/use-dashbaord-context";
+import { DeepAnalytics } from "@/features/dashboard/components/deep-analytics";
 
 export const Route = createLazyFileRoute("/dashboard/")({
   component: RouteComponent,
@@ -16,7 +17,7 @@ function RouteComponent() {
           {/*left profile card */}
           <AnalyticsDashboard />
         </div>
-        <div className=" lg:w-7/12 bg-[#F5F8FB] flex flex-col gap-10 p-5 max-h-[calc(100vh-70px)]">
+        <div className=" lg:w-7/12 bg-[#F5F8FB] flex flex-col gap-10 p-5 max-h-[calc(100vh-70px)] overflow-y-auto">
           {/* right card */}
           {showDeepAnalytics && (
             <div className="p-2">
@@ -28,7 +29,7 @@ function RouteComponent() {
           {!showDeepAnalytics && (
             <div className="p-2">
               {/* normal analytics */}
-              Normal Analytics
+              <DeepAnalytics />
             </div>
           )}
         </div>
