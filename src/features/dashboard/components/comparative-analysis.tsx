@@ -55,7 +55,7 @@ const GradientLineChart = ({ position = 6, imgSrc = "satynadella.png" }) => {
 
   return (
     <div className="flex justify-center items-center pt-20 flex-col align-bottom">
-      <div className="flex flex-col  items-center w-full max-w-sm lg:max-w-xl">
+      <div className="flex flex-col  items-center w-full max-w-sm lg:max-w-[350px] xl:max-w-lg">
         {/* Line Chart */}
         <div className="relative w-full h-1 bg-gray-200 rounded-lg">
           <div
