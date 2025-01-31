@@ -1,13 +1,13 @@
 import * as React from "react";
 
 import { NavMain } from "./nav-main";
-import { NavUser } from "./nav-user";
 
 import {
   Sidebar,
   SidebarContent,
   SidebarFooter,
   SidebarRail,
+  useSidebar,
 } from "./ui/sidebar";
 import {
   DashboardIcon,
@@ -16,6 +16,10 @@ import {
   IconProps,
   IconStack,
 } from "./icons/ui-icons";
+import { useSession } from "@/features/auth/hooks/useSession";
+import { useNavigate } from "@tanstack/react-router";
+import { LogOut } from "lucide-react";
+import { Button } from "./ui/button";
 
 // This is sample data.
 const data: {
@@ -50,6 +54,13 @@ const data: {
 };
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
+  const { logOut } = useSession();
+  const { open } = useSidebar();
+
+  const navigate = useNavigate({
+    from: "/dashboard",
+  });
+
   return (
     <Sidebar collapsible="icon" {...props} className="bg-white">
       <div className="bg-white">
@@ -59,8 +70,20 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
       <SidebarContent className="bg-white">
         <NavMain items={data.navMain} />
       </SidebarContent>
-      <SidebarFooter>
-        <NavUser />
+      <SidebarFooter className="mb-10">
+        <Button
+          variant={"ghost"}
+          className="bg-[#F1F6FA] flex items-center justify-center w-full"
+          onClick={async () => {
+            await logOut();
+            navigate({
+              to: "/",
+            });
+          }}
+        >
+          <LogOut />
+          <span hidden={!open}>Logout</span>
+        </Button>
       </SidebarFooter>
       <SidebarRail />
     </Sidebar>
