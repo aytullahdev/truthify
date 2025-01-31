@@ -51,12 +51,12 @@ const data: {
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
-    <Sidebar collapsible="icon" {...props}>
-      <div>
+    <Sidebar collapsible="icon" {...props} className="bg-white">
+      <div className="bg-white">
         <img src="/truthify_logo.png" alt="logo" className="p-4" />
       </div>
 
-      <SidebarContent>
+      <SidebarContent className="bg-white">
         <NavMain items={data.navMain} />
       </SidebarContent>
       <SidebarFooter>
