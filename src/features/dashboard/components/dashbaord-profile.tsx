@@ -18,7 +18,12 @@ const CARD_DATA = [
 // AnalyticsDashboard.tsx
 export default function AnalyticsDashboard() {
   return (
-    <div className="w-full max-w-3xl mx-auto p-4 space-y-6 overflow-y-auto">
+    <div
+      className="w-full max-w-3xl mx-auto p-4 space-y-6 overflow-y-auto scroll-smooth"
+      style={{
+        scrollbarWidth: "thin",
+      }}
+    >
       {/* Profile */}
       <DashboardProfile />
       {/* Score Cards */}

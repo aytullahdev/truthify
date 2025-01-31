@@ -19,11 +19,17 @@ function RouteComponent() {
         <div className=" lg:w-7/12 bg-[#F5F8FB] flex flex-col gap-10 p-5 max-h-[calc(100vh-70px)]">
           {/* right card */}
           {showDeepAnalytics && (
-            <div className="p-2">{/* deep analytics */}</div>
+            <div className="p-2">
+              {/* deep analytics */}
+              Deep Analytics
+            </div>
           )}
 
           {!showDeepAnalytics && (
-            <div className="p-2">{/* normal analytics */}</div>
+            <div className="p-2">
+              {/* normal analytics */}
+              Normal Analytics
+            </div>
           )}
         </div>
       </div>

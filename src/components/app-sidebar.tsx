@@ -3,7 +3,12 @@ import * as React from "react";
 import { NavMain } from "./nav-main";
 import { NavUser } from "./nav-user";
 
-import { Sidebar, SidebarContent, SidebarFooter } from "./ui/sidebar";
+import {
+  Sidebar,
+  SidebarContent,
+  SidebarFooter,
+  SidebarRail,
+} from "./ui/sidebar";
 import {
   DashboardIcon,
   IconCube,
@@ -57,6 +62,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
       <SidebarFooter>
         <NavUser />
       </SidebarFooter>
+      <SidebarRail />
     </Sidebar>
   );
 }
