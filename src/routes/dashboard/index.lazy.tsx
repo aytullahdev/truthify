@@ -17,7 +17,7 @@ function RouteComponent() {
           {/*left profile card */}
           <AnalyticsDashboard />
         </div>
-        <div className=" lg:w-7/12 bg-[#F5F8FB] flex flex-col gap-10 p-5 lg:max-h-[calc(100vh-70px)] overflow-y-auto">
+        <div className=" lg:w-7/12 bg-[#F5F8FB] flex flex-col lg:gap-10 lg:p-5 lg:max-h-[calc(100vh-70px)] overflow-y-auto">
           {/* right card */}
           {showDeepAnalytics && (
             <div className="p-2">
