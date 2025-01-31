@@ -21,14 +21,14 @@ function RouteComponent() {
         <div className=" lg:w-7/12 bg-[#F5F8FB] flex flex-col lg:gap-10 lg:p-5 lg:max-h-[calc(100vh-70px)] overflow-y-auto">
           {/* right card */}
           {!showDeepAnalytics && (
-            <div className="p-2">
+            <div className="p-2 h-full w-full lg:max-h-[calc(100vh-70px)]">
               {/* normal analytics */}
               <NormalAnalysis />
             </div>
           )}
 
           {showDeepAnalytics && (
-            <div className="p-2">
+            <div className="p-2 h-full w-full lg:max-h-[calc(100vh-70px)]">
               {/* deep analytics */}
 
               <DeepAnalytics />
