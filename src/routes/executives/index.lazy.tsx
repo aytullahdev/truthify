@@ -8,7 +8,9 @@ export const Route = createLazyFileRoute("/executives/")({
 function RouteComponent() {
   return (
     <Layout>
-      <p>Exectives</p>
+      <div className="w-full h-full justify-center items-center flex">
+        <p className="font-bold text-xl uppercase">Not available yet</p>
+      </div>
     </Layout>
   );
 }

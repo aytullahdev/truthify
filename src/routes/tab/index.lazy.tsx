@@ -8,7 +8,9 @@ export const Route = createLazyFileRoute("/tab/")({
 function RouteComponent() {
   return (
     <Layout>
-      <p>Tabs</p>
+      <div className="w-full h-full justify-center items-center flex">
+        <p className="font-bold text-xl uppercase">Not available yet</p>
+      </div>
     </Layout>
   );
 }
