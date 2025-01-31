@@ -68,7 +68,7 @@ export const ScoreCard = ({
       <div
         className={cn(
           "space-y-2 h-full ",
-          scoreRight ? "flex flex-row justify-between p-2 text-center " : ""
+          scoreRight ? "flex flex-row justify-between py-2 text-center " : ""
         )}
       >
         <div className="flex space-y-1 flex-col order-2  ">
