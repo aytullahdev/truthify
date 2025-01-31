@@ -3,7 +3,6 @@ import { createContext, useEffect, useState } from "react";
 import supabase from "@/utils/supabase";
 
 import { LoaderIcon } from "lucide-react";
-import { useNavigate } from "@tanstack/react-router";
 
 export const SessionContext = createContext<{
   session: Session | null;
@@ -16,9 +15,9 @@ export const SessionContext = createContext<{
 });
 
 export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
-  const navigate = useNavigate({
-    from: "/sign-in",
-  });
+  // const navigate = useNavigate({
+  //   from: "/sign-in",
+  // });
   const [session, setSession] = useState<Session | null>(null);
   const [loading, setLoading] = useState(true);
   const [user, setUser] = useState<{
@@ -50,11 +49,11 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
       });
       setLoading(false);
 
-      if (session) {
-        navigate({
-          to: "/dashboard",
-        });
-      }
+      // if (session) {
+      //   navigate({
+      //     to: "/dashboard",
+      //   });
+      // }
     });
 
     return () => subscription.unsubscribe();
