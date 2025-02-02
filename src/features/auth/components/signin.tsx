@@ -18,8 +18,8 @@ export const SignInPage = () => {
             </Link>
           </div>
 
-          <div>
-            <h2 className="text-white font-semibold text-4xl py-5">
+          <div className="w-full lg:min-w-[500px] py-5">
+            <h2 className="text-white font-semibold text-2xl py-5">
               Login to your account
             </h2>
             <SignInForm />
@@ -30,7 +30,7 @@ export const SignInPage = () => {
               Don't have an account?{" "}
               <Link
                 to="/sign-up"
-                className="text-[#069AEE] pl-l font-bold text-base  "
+                className="text-[#069AEE] pl-l font-medium text-base  "
               >
                 Signup
               </Link>

@@ -55,17 +55,21 @@ function RouteComponent() {
             </div>
           </div>
           <div className="flex items-center gap-4 z-50">
-            <Button
-              variant="ghost"
-              className="lg:text-white hover:bg-transparent"
-            >
-              <IconLock className="h-4 w-4 stoke-white   text-white stoke-white fill-white" />
-              Sign In
-            </Button>
-            <Button className="bg-white text-[#272727] hover:bg-white">
-              Sign Up Now
-              <MoveUpRight className="ml-2 h-4 w-4 stroke-black" />
-            </Button>
+            <Link to="/sign-in">
+              <Button
+                variant="ghost"
+                className="lg:text-white hover:bg-transparent"
+              >
+                <IconLock className="h-4 w-4 stoke-white   text-white stoke-white fill-white" />
+                Sign In
+              </Button>
+            </Link>
+            <Link to="/sign-up">
+              <Button className="bg-white text-[#272727] hover:bg-white">
+                Sign Up Now
+                <MoveUpRight className="ml-2 h-4 w-4 stroke-black" />
+              </Button>
+            </Link>
           </div>
         </nav>
 
@@ -91,8 +95,11 @@ function RouteComponent() {
                   and so much more.
                 </p>
               </p>
+
               <Button size="lg" className="bg-[#069AEE] hover:bg-sky-600">
-                Join Now <MoveUpRight className="stroke-white" />
+                <Link to="/sign-up" className="flex items-center gap-2">
+                  Join Now <MoveUpRight className="stroke-white" />
+                </Link>
               </Button>
             </div>
             <div className="relative">

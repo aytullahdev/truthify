@@ -107,7 +107,7 @@ export const SignInForm = () => {
         />
         <Button
           type="submit"
-          className="w-full bg-[#069AEE] py-5 font-medium text-lg"
+          className="w-full bg-[#069AEE] hover:bg-[#069AEE] py-5 font-medium"
           disabled={isLoading}
         >
           {isLoading ? "Logging in..." : "Login"}

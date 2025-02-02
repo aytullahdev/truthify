@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { User, Mail, Lock } from "lucide-react";
+import { User, Mail, Phone } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -16,6 +16,7 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { signupSchema, type SignupFormValues } from "@/features/auth/types";
+import { MoveUpRight } from "@/components/icons/ui-icons";
 
 export const SignupForm = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -25,8 +26,7 @@ export const SignupForm = () => {
     defaultValues: {
       name: "",
       email: "",
-      password: "",
-      confirmPassword: "",
+      phone: "",
     },
   });
 
@@ -50,13 +50,13 @@ export const SignupForm = () => {
           name="name"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Name</FormLabel>
+              <FormLabel className="text-white">Your name</FormLabel>
               <FormControl>
                 <div className="relative">
                   <User className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
                   <Input
                     placeholder="Enter your name"
-                    className="pl-9"
+                    className="pl-9 bg-white"
                     {...field}
                   />
                 </div>
@@ -70,13 +70,13 @@ export const SignupForm = () => {
           name="email"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Email</FormLabel>
+              <FormLabel className="text-white">Email address</FormLabel>
               <FormControl>
                 <div className="relative">
                   <Mail className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
                   <Input
                     placeholder="Enter your email"
-                    className="pl-9"
+                    className="pl-9 bg-white"
                     {...field}
                   />
                 </div>
@@ -87,17 +87,17 @@ export const SignupForm = () => {
         />
         <FormField
           control={form.control}
-          name="password"
+          name="phone"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Password</FormLabel>
+              <FormLabel className="text-white">Phone number</FormLabel>
               <FormControl>
                 <div className="relative">
-                  <Lock className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
+                  <Phone className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
                   <Input
-                    type="password"
-                    placeholder="Enter your password"
-                    className="pl-9"
+                    type="text"
+                    placeholder="Enter your phone number"
+                    className="pl-9 bg-white"
                     {...field}
                   />
                 </div>
@@ -106,29 +106,14 @@ export const SignupForm = () => {
             </FormItem>
           )}
         />
-        <FormField
-          control={form.control}
-          name="confirmPassword"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Confirm Password</FormLabel>
-              <FormControl>
-                <div className="relative">
-                  <Lock className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
-                  <Input
-                    type="password"
-                    placeholder="Confirm your password"
-                    className="pl-9"
-                    {...field}
-                  />
-                </div>
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <Button type="submit" className="w-full" disabled={isLoading}>
-          {isLoading ? "Creating account..." : "Create account"}
+
+        <Button
+          type="submit"
+          className="w-full bg-[#069AEE] hover:bg-[#069AEE]"
+          disabled={isLoading}
+        >
+          {isLoading ? "Creating account..." : "Join now"}
+          <MoveUpRight className="stroke-white" />
         </Button>
       </form>
     </Form>
