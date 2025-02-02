@@ -18,6 +18,7 @@ import { Route as rootRoute } from './routes/__root'
 
 const IndexLazyImport = createFileRoute('/')()
 const TabIndexLazyImport = createFileRoute('/tab/')()
+const SignUpIndexLazyImport = createFileRoute('/sign-up/')()
 const SignInIndexLazyImport = createFileRoute('/sign-in/')()
 const MakeYourOwnIndexLazyImport = createFileRoute('/make-your-own/')()
 const ExecutivesIndexLazyImport = createFileRoute('/executives/')()
@@ -36,6 +37,12 @@ const TabIndexLazyRoute = TabIndexLazyImport.update({
   path: '/tab/',
   getParentRoute: () => rootRoute,
 } as any).lazy(() => import('./routes/tab/index.lazy').then((d) => d.Route))
+
+const SignUpIndexLazyRoute = SignUpIndexLazyImport.update({
+  id: '/sign-up/',
+  path: '/sign-up/',
+  getParentRoute: () => rootRoute,
+} as any).lazy(() => import('./routes/sign-up/index.lazy').then((d) => d.Route))
 
 const SignInIndexLazyRoute = SignInIndexLazyImport.update({
   id: '/sign-in/',
@@ -106,6 +113,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SignInIndexLazyImport
       parentRoute: typeof rootRoute
     }
+    '/sign-up/': {
+      id: '/sign-up/'
+      path: '/sign-up'
+      fullPath: '/sign-up'
+      preLoaderRoute: typeof SignUpIndexLazyImport
+      parentRoute: typeof rootRoute
+    }
     '/tab/': {
       id: '/tab/'
       path: '/tab'
@@ -124,6 +138,7 @@ export interface FileRoutesByFullPath {
   '/executives': typeof ExecutivesIndexLazyRoute
   '/make-your-own': typeof MakeYourOwnIndexLazyRoute
   '/sign-in': typeof SignInIndexLazyRoute
+  '/sign-up': typeof SignUpIndexLazyRoute
   '/tab': typeof TabIndexLazyRoute
 }
 
@@ -133,6 +148,7 @@ export interface FileRoutesByTo {
   '/executives': typeof ExecutivesIndexLazyRoute
   '/make-your-own': typeof MakeYourOwnIndexLazyRoute
   '/sign-in': typeof SignInIndexLazyRoute
+  '/sign-up': typeof SignUpIndexLazyRoute
   '/tab': typeof TabIndexLazyRoute
 }
 
@@ -143,6 +159,7 @@ export interface FileRoutesById {
   '/executives/': typeof ExecutivesIndexLazyRoute
   '/make-your-own/': typeof MakeYourOwnIndexLazyRoute
   '/sign-in/': typeof SignInIndexLazyRoute
+  '/sign-up/': typeof SignUpIndexLazyRoute
   '/tab/': typeof TabIndexLazyRoute
 }
 
@@ -154,6 +171,7 @@ export interface FileRouteTypes {
     | '/executives'
     | '/make-your-own'
     | '/sign-in'
+    | '/sign-up'
     | '/tab'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -162,6 +180,7 @@ export interface FileRouteTypes {
     | '/executives'
     | '/make-your-own'
     | '/sign-in'
+    | '/sign-up'
     | '/tab'
   id:
     | '__root__'
@@ -170,6 +189,7 @@ export interface FileRouteTypes {
     | '/executives/'
     | '/make-your-own/'
     | '/sign-in/'
+    | '/sign-up/'
     | '/tab/'
   fileRoutesById: FileRoutesById
 }
@@ -180,6 +200,7 @@ export interface RootRouteChildren {
   ExecutivesIndexLazyRoute: typeof ExecutivesIndexLazyRoute
   MakeYourOwnIndexLazyRoute: typeof MakeYourOwnIndexLazyRoute
   SignInIndexLazyRoute: typeof SignInIndexLazyRoute
+  SignUpIndexLazyRoute: typeof SignUpIndexLazyRoute
   TabIndexLazyRoute: typeof TabIndexLazyRoute
 }
 
@@ -189,6 +210,7 @@ const rootRouteChildren: RootRouteChildren = {
   ExecutivesIndexLazyRoute: ExecutivesIndexLazyRoute,
   MakeYourOwnIndexLazyRoute: MakeYourOwnIndexLazyRoute,
   SignInIndexLazyRoute: SignInIndexLazyRoute,
+  SignUpIndexLazyRoute: SignUpIndexLazyRoute,
   TabIndexLazyRoute: TabIndexLazyRoute,
 }
 
@@ -207,6 +229,7 @@ export const routeTree = rootRoute
         "/executives/",
         "/make-your-own/",
         "/sign-in/",
+        "/sign-up/",
         "/tab/"
       ]
     },
@@ -224,6 +247,9 @@ export const routeTree = rootRoute
     },
     "/sign-in/": {
       "filePath": "sign-in/index.lazy.tsx"
+    },
+    "/sign-up/": {
+      "filePath": "sign-up/index.lazy.tsx"
     },
     "/tab/": {
       "filePath": "tab/index.lazy.tsx"

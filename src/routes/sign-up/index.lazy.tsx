@@ -1,8 +1,13 @@
-import { Link } from "@tanstack/react-router";
-import { SignInForm } from "./signin-form";
 import { BottomFooter } from "@/components/bottom-footer";
+import { SignupForm } from "@/features/auth/components/signup-form";
+import { createLazyFileRoute } from "@tanstack/react-router";
+import { Link } from "lucide-react";
 
-export const SignInPage = () => {
+export const Route = createLazyFileRoute("/sign-up/")({
+  component: RouteComponent,
+});
+
+function RouteComponent() {
   return (
     <div className="min-h-screen flex flex-col justify-between bg-[#002443]">
       <div className=" max-h-screen  flex flex-col items-center  ">
@@ -22,14 +27,14 @@ export const SignInPage = () => {
             <h2 className="text-white font-semibold text-4xl py-5">
               Login to your account
             </h2>
-            <SignInForm />
+            <SignupForm />
           </div>
 
           <div>
             <p className="text-white text-sm text-center">
               Don't have an account?{" "}
               <Link
-                to="/sign-up"
+                to="/signup"
                 className="text-[#069AEE] pl-l font-bold text-base  "
               >
                 Signup
@@ -41,4 +46,4 @@ export const SignInPage = () => {
       <BottomFooter className="bg-[#002443]" />
     </div>
   );
-};
+}
