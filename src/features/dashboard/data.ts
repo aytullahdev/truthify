@@ -105,4 +105,33 @@ export const tempData = {
         "The reliability of the product is the most important attribute",
     },
   ],
+
+  FALLACY_DATA: [
+    {
+      title:
+        "Interview : Integer sagittis tempus diam at aliquet. roin et purus eu turpis suscipit",
+      date: "13 April 2024",
+      fallacyCount: 4,
+      fallacies: [
+        { name: "Argument from Authority" },
+        { name: "False Dilemma" },
+        { name: "Hasty Generalization" },
+        { name: "Appeal to Emotion" },
+      ],
+      score: -2,
+    },
+    {
+      title:
+        "Interview : Integer sagittis tempus diam at aliquet. roin et purus eu turpis suscipit",
+      date: "13 April 2024",
+      fallacyCount: 4,
+      fallacies: [
+        { name: "Argument from Authority" },
+        { name: "False Dilemma" },
+        { name: "Hasty Generalization" },
+        { name: "Appeal to Emotion" },
+      ],
+      score: 5,
+    },
+  ],
 };
