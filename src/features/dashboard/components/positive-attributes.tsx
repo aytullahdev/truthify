@@ -4,7 +4,7 @@ import { useState } from "react";
 
 export const PositiveAttributes = () => {
   return (
-    <div className="w-full h-full flex-1">
+    <div className="w-full h-full flex-1 overflow-y-auto">
       <h2 className="text-[#292929] font-semibold text-xl pb-2">
         Positive Attributes
       </h2>
