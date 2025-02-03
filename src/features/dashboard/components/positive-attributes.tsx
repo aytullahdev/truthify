@@ -1,6 +1,7 @@
 import { cn } from "@/lib/utils";
 import { XIcon } from "lucide-react";
 import { useState } from "react";
+import { tempData } from "../data";
 
 export const PositiveAttributes = () => {
   return (
@@ -10,7 +11,7 @@ export const PositiveAttributes = () => {
       </h2>
       <div className="w-full ">
         <div className="flex gap-5 justify-center lg:justify-start lg:flex-row flex-wrap w-full ">
-          {CARD_DATA.map((card, index) => (
+          {tempData["SCORE_CARD_DATA"].map((card, index) => (
             <AttributesCard {...card} key={index} />
           ))}
         </div>
@@ -124,64 +125,3 @@ export const RatingBar = ({ value = 0 }: { value: number }) => {
     </div>
   );
 };
-
-const CARD_DATA = [
-  {
-    imgSrc: "genuineness.svg",
-    rating: 8.2,
-    attributeName: "Genuineness",
-    attributeDescription:
-      "The genuineness of the product is the most important attribute",
-  },
-  {
-    imgSrc: "consistancy.svg",
-    rating: 9.0,
-    attributeName: "Consistency",
-    attributeDescription:
-      "The quality of the product is the most important attribute",
-  },
-  {
-    imgSrc: "logic.svg",
-    rating: 8.9,
-    attributeName: "Logic",
-    attributeDescription:
-      "The durability of the product is the most important attribute",
-  },
-  {
-    imgSrc: "genuineness.svg",
-    rating: 8.2,
-    attributeName: "Genuineness",
-    attributeDescription:
-      "The genuineness of the product is the most important attribute",
-  },
-
-  {
-    imgSrc: "fear.svg",
-    rating: 4,
-    attributeName: "Irrational Fear",
-    attributeDescription:
-      "The reliability of the product is the most important attribute",
-  },
-  {
-    imgSrc: "excitement.svg",
-    rating: 4,
-    attributeName: "Irrational Excitement",
-    attributeDescription:
-      "The reliability of the product is the most important attribute",
-  },
-  {
-    imgSrc: "deflection.svg",
-    rating: 1.8,
-    attributeName: "Deflection",
-    attributeDescription:
-      "The reliability of the product is the most important attribute",
-  },
-
-  {
-    imgSrc: "traingulation.svg",
-    rating: 2.4,
-    attributeName: "Triangulation",
-    attributeDescription:
-      "The reliability of the product is the most important attribute",
-  },
-];

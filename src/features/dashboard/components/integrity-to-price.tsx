@@ -15,20 +15,7 @@ import {
   ChartTooltipContent,
 } from "@/components/ui/chart";
 import { useState } from "react";
-const data = [
-  { month: "Jan", integrity: 40.2, stock: 25.1, market: 45.7 },
-  { month: "Feb", integrity: 20.1, stock: 25.3, market: 34.8 },
-  { month: "Mar", integrity: 32.0, stock: 20.0, market: 35.2 },
-  { month: "Apr", integrity: 22.5, stock: 26.5, market: 35.9 },
-  { month: "May", integrity: 33.1, stock: 27.0, market: 56.2 },
-  { month: "Jun", integrity: 32.9, stock: 26.8, market: 35.7 },
-  { month: "Jul", integrity: 33.4, stock: 27.2, market: 36.1 },
-  { month: "Aug", integrity: 34.1, stock: 27.8, market: 36.5 },
-  { month: "Sep", integrity: 33.9, stock: 27.6, market: 36.3 },
-  { month: "Oct", integrity: 34.5, stock: 28.0, market: 36.8 },
-  { month: "Nov", integrity: 35.0, stock: 28.4, market: 47.2 },
-  { month: "Dec", integrity: 35.8, stock: 49.0, market: 37.8 },
-];
+import { tempData } from "../data";
 
 const chartConfig = {
   integrity: {
@@ -59,7 +46,7 @@ export const IntegrityToPrice = () => {
           <ChartContainer config={chartConfig}>
             <LineChart
               accessibilityLayer
-              data={data}
+              data={tempData["CHART_DATA"]}
               margin={{
                 left: 12,
                 right: 12,
