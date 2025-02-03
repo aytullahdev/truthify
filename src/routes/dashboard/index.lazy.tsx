@@ -3,6 +3,7 @@ import Layout from "../../components/layout";
 import AnalyticsDashboard from "@/features/dashboard/components/dashbaord-profile";
 import { useDashboardContext } from "@/features/dashboard/hooks/use-dashbaord-context";
 import { DeepAnalytics } from "@/features/dashboard/components/deep-analytics";
+import { NormalAnalysis } from "@/features/dashboard/components/normal-analysis";
 
 export const Route = createLazyFileRoute("/dashboard/")({
   component: RouteComponent,
@@ -19,16 +20,17 @@ function RouteComponent() {
         </div>
         <div className=" lg:w-7/12 bg-[#F5F8FB] flex flex-col lg:gap-10 lg:p-5 lg:max-h-[calc(100vh-70px)] overflow-y-auto">
           {/* right card */}
-          {showDeepAnalytics && (
-            <div className="p-2">
-              {/* deep analytics */}
-              Deep Analytics
+          {!showDeepAnalytics && (
+            <div className="p-2 h-full w-full lg:max-h-[calc(100vh-70px)]">
+              {/* normal analytics */}
+              <NormalAnalysis />
             </div>
           )}
 
-          {!showDeepAnalytics && (
-            <div className="p-2">
-              {/* normal analytics */}
+          {showDeepAnalytics && (
+            <div className="p-2 h-full w-full lg:max-h-[calc(100vh-70px)]">
+              {/* deep analytics */}
+
               <DeepAnalytics />
             </div>
           )}
