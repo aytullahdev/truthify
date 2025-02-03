@@ -1,3 +1,4 @@
+import { BottomFooter } from "@/components/bottom-footer";
 import {
   ChevronDown,
   IconCheck,
@@ -54,17 +55,21 @@ function RouteComponent() {
             </div>
           </div>
           <div className="flex items-center gap-4 z-50">
-            <Button
-              variant="ghost"
-              className="lg:text-white hover:bg-transparent"
-            >
-              <IconLock className="h-4 w-4 stoke-white   text-white stoke-white fill-white" />
-              Sign In
-            </Button>
-            <Button className="bg-white text-[#272727] hover:bg-white">
-              Sign Up Now
-              <MoveUpRight className="ml-2 h-4 w-4 stroke-black" />
-            </Button>
+            <Link to="/sign-in">
+              <Button
+                variant="ghost"
+                className="lg:text-white hover:bg-transparent"
+              >
+                <IconLock className="h-4 w-4 stoke-white   text-white stoke-white fill-white" />
+                Sign In
+              </Button>
+            </Link>
+            <Link to="/sign-up">
+              <Button className="bg-white text-[#272727] hover:bg-white">
+                Sign Up Now
+                <MoveUpRight className="ml-2 h-4 w-4 stroke-black" />
+              </Button>
+            </Link>
           </div>
         </nav>
 
@@ -90,8 +95,11 @@ function RouteComponent() {
                   and so much more.
                 </p>
               </p>
+
               <Button size="lg" className="bg-[#069AEE] hover:bg-sky-600">
-                Join Now <MoveUpRight className="stroke-white" />
+                <Link to="/sign-up" className="flex items-center gap-2">
+                  Join Now <MoveUpRight className="stroke-white" />
+                </Link>
               </Button>
             </div>
             <div className="relative">
@@ -625,27 +633,7 @@ function RouteComponent() {
               </div>
             </div>
           </div>
-          {/* <!-- Footer Bottom --> */}
-          <div className="container mx-auto bg-[#0a1628] py-4 px-5 border-t border-gray-800 flex flex-col sm:flex-row justify-between items-center gap-4">
-            <p className="text-gray-400 text-sm">
-              © 2024 Truthify. All rights reserved.
-            </p>
-            {/* <!-- Social Links --> */}
-            <div className="flex items-center gap-6">
-              <a href="#">
-                <img src="/facebook.png" alt="facebook" className="size-6" />
-              </a>
-              <a href="#">
-                <img src="/google.png" alt="facebook" className="size-6" />
-              </a>
-              <a href="#">
-                <img src="/apple.png" alt="facebook" className="size-6" />
-              </a>
-              <a href="#">
-                <img src="/instagram.png" alt="facebook" className="size-6" />
-              </a>
-            </div>
-          </div>
+          <BottomFooter />
         </footer>
       </div>
     </div>
