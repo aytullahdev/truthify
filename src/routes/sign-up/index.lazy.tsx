@@ -9,7 +9,7 @@ export const Route = createLazyFileRoute("/sign-up/")({
 function RouteComponent() {
   return (
     <div className="min-h-screen flex flex-col justify-between bg-[#002443]">
-      <div className=" max-h-screen  flex flex-col items-center  ">
+      <div className=" max-h-screen  flex flex-col items-center  overflow-y-auto ">
         <div className="max-w-xl lg:min-w-xl flex flex-col justify-around space-y-10 ">
           <div className="py-10">
             <img src="truthify_logo.png" alt="logo" />
@@ -22,7 +22,7 @@ function RouteComponent() {
             </Link>
           </div>
 
-          <div className="w-full lg:min-w-[500px] py-5">
+          <div className="w-full lg:min-w-[500px] py-5 overflow-y-auto">
             <h2 className="text-white font-medium text-2xl py-5">
               Create an account
             </h2>

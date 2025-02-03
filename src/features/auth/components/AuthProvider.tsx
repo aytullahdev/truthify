@@ -1,9 +1,17 @@
-import { Session } from "@supabase/supabase-js";
-import { createContext, useEffect, useState } from "react";
-import supabase from "@/utils/supabase";
+import { createContext, useState } from "react";
 
 import { LoaderIcon } from "lucide-react";
-
+export type Session = {
+  access_token: string;
+  user: {
+    id: string;
+    email: string;
+    user_metadata: {
+      full_name: string;
+      avatar_url: string;
+    };
+  };
+};
 export const SessionContext = createContext<{
   session: Session | null;
   logOut: () => Promise<void>;
@@ -15,11 +23,8 @@ export const SessionContext = createContext<{
 });
 
 export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
-  // const navigate = useNavigate({
-  //   from: "/sign-in",
-  // });
   const [session, setSession] = useState<Session | null>(null);
-  const [loading, setLoading] = useState(true);
+  const [loading] = useState(false);
   const [user, setUser] = useState<{
     email: string;
     id: string;
@@ -32,33 +37,6 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
     avatar: "",
   });
 
-  useEffect(() => {
-    supabase.auth.getSession().then(({ data: { session } }) => {
-      setSession(session);
-    });
-
-    const {
-      data: { subscription },
-    } = supabase.auth.onAuthStateChange((_event, session) => {
-      setSession(session);
-      setUser({
-        email: session?.user.email || "",
-        id: session?.user.id || "",
-        name: session?.user.user_metadata.full_name || "",
-        avatar: session?.user.user_metadata.avatar_url || "",
-      });
-      setLoading(false);
-
-      // if (session) {
-      //   navigate({
-      //     to: "/dashboard",
-      //   });
-      // }
-    });
-
-    return () => subscription.unsubscribe();
-  }, []);
-
   const clearSession = async () => {
     setSession(null);
     setUser({
@@ -67,8 +45,6 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
       name: "",
       avatar: "",
     });
-
-    await supabase.auth.signOut();
   };
 
   return (

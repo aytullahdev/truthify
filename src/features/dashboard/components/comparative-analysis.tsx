@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
-
+export interface ComparativeAnalysisProps {
+  position: number;
+  imgSrc: string;
+  name: string;
+}
 export const ComparativeAnalysis = ({
-  position = 6,
-  imgSrc = "satynadella.png",
-  name = "Satya Nadella",
-}: {
-  position?: number;
-  imgSrc?: string;
-  name?: string;
-}) => {
+  position,
+  imgSrc,
+  name,
+}: ComparativeAnalysisProps) => {
   return (
     <div className="bg-white  rounded-md border pb-20">
       <div className=" px-5 py-3 flex flex-row justify-between">
